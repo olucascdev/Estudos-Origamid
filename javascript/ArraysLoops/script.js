@@ -63,17 +63,32 @@ videoGames.forEach(function(item) {
 
 // O argumento item será atribuído dinamicamente
 //Podemos passar os seguintes parâmetros item, index e array
-
+var flamengo = [1981, 2019, 2021];
+flamengo.forEach(function(item,index, array){
+  console.log(item, index, array);
+})
 // Crie uma array com os anos que o Brasil ganhou a copa
 // 1959, 1962, 1970, 1994, 2002
+var copasBrasil = [1959,1962,1970,1994,2002];
 
 // Interaja com a array utilizando um loop, para mostrar
 // no console a seguinte mensagem, `O brasil ganhou a copa de ${ano}`
+copasBrasil.forEach(function(ano){
+  console.log(`O brasil ganhou a copa de ${ano}`);
+});
 
 // Interaja com um loop nas frutas abaixo e pare ao chegar em Pera
-var frutas = ['Banana', 'Maçã', 'Pera', 'Uva', 'Melância']
+var frutas2 = ['Banana', 'Maçã', 'Pera', 'Uva', 'Melância']
+for(var i = 0; i < frutas2.length ; i++ ){
+  console.log(frutas2[i]);
+  if( frutas2[i] === 'Pera'){
+    break;
+  }
+}
 
 // Coloque a última fruta da array acima em uma variável,
 // sem remover a mesma da array.
+var ultimaFruta = frutas2[frutas2.length - 1];
+console.log(ultimaFruta);
 
 
