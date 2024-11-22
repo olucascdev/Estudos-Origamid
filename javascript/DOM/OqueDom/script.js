@@ -1,40 +1,28 @@
-var nome = 'Lucas';
-var idade = 22;
-var possuiFaculdade = true;
+const href1 = window.location.href
 
-console.log(nome, idade, possuiFaculdade);
 
-var preco = 25;
-var totalComprado = 5;
-var totalPreco = totalComprado * preco;
-console.log(totalPreco);
 
-var sobrenome = 'Lucas', cidade = 'SM';
+if(href1 === 'http://127.0.0.1:5500/javascript/DOM/OqueDom/index.html') {
+  console.log('é igual');
+}
 
-console.log(sobrenome, cidade);
+const h1Select = document.querySelector('h1');
+const h1Classes = h1Select.classList;
 
-var Semdefinir;
-console.log(Semdefinir);
+h1Select.addEventListener('click', function(){
+  console.log('Clicou em', h1Select.innerText);
+});
 
-var time = 'Vasco';
-time = 'Flamengo';
-console.log(time);
 
 //Exercícios 
 
-// Declarar uma variável com o seu nome
- var nomeCompleto = 'Lucas Correia';
- console.log(nomeCompleto);
-// Declarar uma variável com a sua idade
- var minhaIdade = 22;
- console.log(minhaIdade);
-// Declarar uma variável com a sua comida
- var comidaFav = 'Churrasco';
- console.log(comidaFav);
-// favorita e não atribuir valor
- var minhaComidaFav;
-// Atribuir valor a sua comida favorita
- var minhaComidaFav = 'Churrasco 2.0'
-// Declarar 5 variáveis diferentes sem valores
- var estado, cep, qtd , online, animal ;
- console.log(estado,cep,qtd,online,animal);
+// Retorne o url da página atual utilizando o objeto window
+console.log(window.location.href);
+// Seleciona o primeiro elemento da página que
+// possua a classe ativo
+console.log(document.querySelector('.ativo'));
+
+// Retorne a linguagem do navegador
+console.log(window.navigator.language);
+// Retorne a largura da janela 
+console.log(window.innerWidth);
