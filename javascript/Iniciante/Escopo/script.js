@@ -98,8 +98,7 @@ console.log(i); // i is not defined
 //Mantém o escopo no bloco, impede a redeclaração e impede a modificação do valor da variável, evitando bugs no código.
 
 const mes = 'Dezembro';
-mes = 'Janeiro'; // erro, tentou modificar o valor
-const semana; // erro, declarou sem valor
+
 
 const data = {
   dia: 28,
@@ -113,7 +112,7 @@ data = 'Janeiro'; // erro
 //Let
 //Mantém o escopo no bloco, impede a redeclaração, mas permite a modificação do valor da variável.
 
-let ano;
+
 ano = 2018;
 ano++;
 console.log(ano); // 2019
@@ -127,12 +126,14 @@ let ano = 2020; // erro, redeclarou a variável
   var cor = 'preto';
   const marca = 'Fiat';
   let portas = 4;
+  console.log(cor, marca, portas);
 }
-console.log(var, marca, portas);
+
+//pois somente o var vaza do escopo
 
 // Como corrigir o erro abaixo?
+const dois = 2;
 function somarDois(x) {
-  const dois = 2;
   return x + dois;
 }
 function dividirDois(x) {
@@ -142,9 +143,9 @@ somarDois(4);
 dividirDois(6);
 
 // O que fazer para total retornar 500?
-var numero = 50;
+const numero = 50;
 
-for(var numero = 0; numero < 10; numero++) {
+for(let numero = 0; numero < 10; numero++) {
   console.log(numero);
 }
 
